@@ -30,7 +30,7 @@ export const useCart = () => {
     setCart(currentCart => {
         // find if the item already exists in the shopping item
         // important - we assume `product_id` is the id of the product
-        const existingItemIndex = cart.findIndex(i => i.product_id === product.product_id);
+        const existingItemIndex = cart.findIndex(i => i.product_id === product.id);
         if (existingItemIndex !== -1) {
             let newQuantity = cart[existingItemIndex].quantity + 1;
 

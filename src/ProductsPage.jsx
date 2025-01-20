@@ -58,6 +58,7 @@ export default function ProductsPage() {
     const { showMessage} = useFlashMessage();
 
     const handleAddToCart = (product) => {
+      console.log(product);
         addToCart({
             product_id: product.id,
             productName: product.name,
@@ -72,11 +73,12 @@ export default function ProductsPage() {
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios.get("products.json");
+            console.log(response.data);
             setProducts(response.data);
         }
         fetchData();
     }, []);
-
+    // products.map((p)=> {console.log("LOOK HERE >>>> ",p)})
     return (
         <div className="container mt-5">
             <h1>Our Products</h1>

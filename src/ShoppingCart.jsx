@@ -11,19 +11,22 @@ const ShoppingCart = () => {
         <p>Your cart is empty.</p>
       ) : (
         <>
+
           <ul className="list-group">
             {cart.map((item) => (
-              <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center">
-                <div>
-                  <h5>{item.productName}</h5>
-                  <div className="d-flex align-items-center">
-                    <button className="btn btn-sm btn-secondary me-2" onClick={() => modifyQuantity(item.product_id, item.quantity - 1)}>-</button>
-                    <p className="mb-0">Quantity: {item.quantity}</p>
-                    <button className="btn btn-sm btn-secondary ms-2" onClick={() => modifyQuantity(item.product_id, item.quantity + 1)}>+</button>
+              <div key={item.id} className="col-md-3 mb-4">
+                <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5>{item.productName}</h5>
+                    <div className="d-flex align-items-center">
+                      <button className="btn btn-sm btn-secondary me-2" onClick={() => modifyQuantity(item.product_id, item.quantity - 1)}>-</button>
+                      <p className="mb-0">Quantity: {item.quantity}</p>
+                      <button className="btn btn-sm btn-secondary ms-2" onClick={() => modifyQuantity(item.product_id, item.quantity + 1)}>+</button>
+                    </div>
                   </div>
-                </div>
-                <span>${(item.price * item.quantity).toFixed(2)}</span>
-              </li>
+                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                </li>
+              </div>
             ))}
           </ul>
           <div className="mt-3 text-end">

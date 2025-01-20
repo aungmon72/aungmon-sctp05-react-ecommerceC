@@ -29,6 +29,7 @@ import { Route, Switch } from 'wouter';
 import ProductsPage from './ProductsPage';
 import RegisterPage from './RegisterPage';
 import { useFlashMessage } from './FlashMessageStore';
+import ShoppingCart from './ShoppingCart';
 
 function App() {
   const { getMessage, clearMessage  } = useFlashMessage();
@@ -58,6 +59,8 @@ function App() {
         <Route path="/" component={HomePage} />
         <Route path="/products" component={ProductsPage} />
         <Route path="/register" component={RegisterPage} />
+        <Route path="/cart" component={ShoppingCart} />
+
       </Switch>
 
       <footer className="bg-dark text-white text-center py-3">

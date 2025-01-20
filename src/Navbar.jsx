@@ -38,11 +38,23 @@ function Navbar() {
                 Register
               </Link>
             </li>
+            <li className="nav-item">
+              <Link href="/cart" className={`nav-link ${location === '/cart' ? 'active' : ''}`}>
+                Cart
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   );
 }
+
+// import React, { useState } from 'react';
+// import { Link, useLocation } from 'wouter';
+
+
+
+
 
 export default Navbar;

@@ -50,8 +50,6 @@ function Navbar() {
   );
 }
 
-// import React, { useState } from 'react';
-// import { Link, useLocation } from 'wouter';
 
 
 

@@ -1,6 +1,14 @@
 import ProductCard from './ProductCard';
 import React, {useState, useEffect } from 'react';
-
+import Navbar from './Navbar';
+import HomePage from './HomePage';
+import { Route, Switch } from 'wouter';
+import ProductsPage from './ProductsPage';
+import RegisterPage from './RegisterPage';
+import { useFlashMessage } from './FlashMessageStore';
+import ShoppingCart from './ShoppingCart';
+// make sure to import `UserLogin.jsx` after the other imports
+import UserLogin from "./UserLogin"
 function App2() {
 
 
@@ -23,13 +31,8 @@ function App2() {
   );
 }
 
-import Navbar from './Navbar';
-import HomePage from './HomePage';
-import { Route, Switch } from 'wouter';
-import ProductsPage from './ProductsPage';
-import RegisterPage from './RegisterPage';
-import { useFlashMessage } from './FlashMessageStore';
-import ShoppingCart from './ShoppingCart';
+
+
 
 function App() {
   const { getMessage, clearMessage  } = useFlashMessage();
@@ -59,6 +62,7 @@ function App() {
         <Route path="/" component={HomePage} />
         <Route path="/products" component={ProductsPage} />
         <Route path="/register" component={RegisterPage} />
+        <Route path="/login" component={UserLogin} />
         <Route path="/cart" component={ShoppingCart} />
 
       </Switch>

@@ -1,4 +1,5 @@
 
+
 function ProductsPage2() {
   return (
     <div className="container mt-5">
@@ -72,7 +73,8 @@ export default function ProductsPage() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get("products.json");
+            // const response = await axios.get("products.json");
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/products`);
             console.log(response.data);
             setProducts(response.data);
         }

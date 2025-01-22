@@ -8,7 +8,9 @@ import RegisterPage from './RegisterPage';
 import { useFlashMessage } from './FlashMessageStore';
 import ShoppingCart from './ShoppingCart';
 // make sure to import `UserLogin.jsx` after the other imports
-import UserLogin from "./UserLogin"
+import UserLogin from "./UserLogin";
+import UserLogoff from "./UserLogoff";
+
 function App2() {
 
 
@@ -59,12 +61,12 @@ function App() {
         </div>
       )}
       <Switch>
-        <Route path="/" component={HomePage} />
-        <Route path="/products" component={ProductsPage} />
-        <Route path="/register" component={RegisterPage} />
-        <Route path="/login" component={UserLogin} />
-        <Route path="/cart" component={ShoppingCart} />
-
+        <Route path="/"               component={HomePage} />
+        <Route path="/products"       component={ProductsPage} />
+        <Route path="/register"       component={RegisterPage} />
+        <Route path="/login"          component={UserLogin} />
+        <Route path="/cart"           component={ShoppingCart} />
+        <Route path="/logoff"         component={UserLogoff} />
       </Switch>
 
       <footer className="bg-dark text-white text-center py-3">

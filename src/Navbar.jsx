@@ -48,6 +48,11 @@ function Navbar() {
                 Cart
               </Link>
             </li>
+            <li className="nav-item">
+              <Link href="/logoff" className={`nav-link ${location === '/logoff' ? 'active' : ''}`}>
+                Logoff
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
